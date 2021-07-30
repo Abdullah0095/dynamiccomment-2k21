@@ -8,28 +8,31 @@
     <title>Dynamic Comment</title>
     <style>
         .comment-box {
-            background-color: rgb(40, 59, 59);
+            background-color: rgb(8, 26, 26);
             border-radius: 10px;
             border: 2px solid black;
-            box-shadow: 5px 5px 2px gray;
+            box-shadow: 5px 5px 2px rgb(26, 21, 21);
             margin: 5px;
             width: 30%;
             float: left;
             height: 250px;
             margin-top: 20px;
             text-align: center;
+            color: white;
         }
     </style>
 </head>
 
 <body>
-    <div id="comment-list">
-
+    <div>
+        <div style="font-size: larger; text-align: center;"><h1>Comment List</h1></div>
+        <div id="comment-list"></div>
     </div>
+  
     <script>
         fetch('https://jsonplaceholder.typicode.com/comments')
             .then(res => res.json())
-            .then(data => commentList(data))
+            .then(data => commentList(data));
 
         function commentList(data) {
             let comment = ' ';
