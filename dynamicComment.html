@@ -8,11 +8,16 @@
     <title>Dynamic Comment</title>
     <style>
         .comment-box {
-            background-color: aqua;
+            background-color: rgb(40, 59, 59);
             border-radius: 10px;
             border: 2px solid black;
             box-shadow: 5px 5px 2px gray;
             margin: 5px;
+            width: 30%;
+            float: left;
+            height: 250px;
+            margin-top: 20px;
+            text-align: center;
         }
     </style>
 </head>
@@ -34,9 +39,9 @@
                 const commentData = data[i];
 
                 comment = comment + `<div class="comment-box">
-                    <h1>Name : ${commentData.name}</h1>
-                    <h3>Email : ${commentData.email}</h3>
-                    <p>Comment : ${commentData.body}</p>    
+                    <h1>${commentData.name}</h1>
+                    <h3>${commentData.email}</h3>
+                    <p>${commentData.body}</p>    
                     </div>`;
 
 
